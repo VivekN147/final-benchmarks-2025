@@ -1,5 +1,10 @@
+(define (multiply x y)
+  (if (= y 0)
+      0
+      (+ x (multiply x (sub1 y)))))
+
 (define (horner-step coeff acc x)
-  (+ coeff (* acc x)))
+  (+ coeff (multiply acc x)))
 
 (define (poly5 x)
   (let ((s1 (horner-step 7 0 x)))

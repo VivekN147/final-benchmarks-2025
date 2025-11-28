@@ -1,5 +1,10 @@
+(define (multiply x y)
+  (if (= y 0)
+      0
+      (+ x (multiply x (sub1 y)))))
+
 (define (mix2 x y u v)
-  (+ (* x y) (* u v)))
+  (+ (multiply x y) (multiply u v)))
 
 (define (mat2-mul a00 a01 a10 a11 b00 b01 b10 b11)
   (let ((c00 (mix2 a00 b00 a01 b10)))

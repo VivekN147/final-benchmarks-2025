@@ -1,5 +1,10 @@
+(define (multiply x y)
+  (if (= y 0)
+      0
+      (+ x (multiply x (sub1 y)))))
+
 (define (muladd x y acc)
-  (+ acc (* x y)))
+  (+ acc (multiply x y)))
 
 (define (dot4 ax ay az aw bx by bz bw)
   (muladd aw bw

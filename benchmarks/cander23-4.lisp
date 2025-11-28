@@ -1,6 +1,11 @@
+(define (multiply x y)
+  (if (= y 0)
+      0
+      (+ x (multiply x (sub1 y)))))
+
 (define (phantom-cascade x y z w)
-  (let ((sum1 (+ (* x y) (* z w))))
-    (let ((sum2 (+ (* w z) (* y x))))
+  (let ((sum1 (+ (multiply x y) (multiply z w))))
+    (let ((sum2 (+ (multiply w z) (multiply y x))))
       (let ((bundle (pair sum1 sum2)))
         (left (pair (left bundle) (right bundle)))))))
 
