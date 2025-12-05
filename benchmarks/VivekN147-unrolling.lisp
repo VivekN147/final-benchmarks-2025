@@ -1,5 +1,5 @@
-(define (2_times_k k acc)
+(define (2timesk k acc)
     (if (zero? k)
     acc
-    (2_times_k (sub1 k) (acc + 2))))
-(print (2_times_k 10 0))
+    (2timesk (sub1 k) (acc + 2))))
+(print (2timesk 10 0))
