@@ -1,1 +1,1 @@
-(+ (read-num) (+ (add1 (add1 (add1 (add1 (add1 (read-num)))))) (add1 (add1 (+ 10 (read-num))))))
+(print (+ (read-num) (+ (add1 (add1 (add1 (add1 (add1 (read-num)))))) (add1 (add1 (+ 10 (read-num)))))))
