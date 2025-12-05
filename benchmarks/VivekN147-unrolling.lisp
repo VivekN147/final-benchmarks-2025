@@ -1,5 +1,5 @@
-(define (2timesk k acc)
+(define (twicek k acc)
     (if (zero? k)
     acc
-    (2timesk (sub1 k) (acc + 2))))
-(print (2timesk 10 0))
+    (twicek (sub1 k) (+ acc 2))))
+(print (twicek 10 0))

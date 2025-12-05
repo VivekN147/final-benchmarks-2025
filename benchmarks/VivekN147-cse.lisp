@@ -1,3 +1,3 @@
-(define (doublesum a b)
-    (+ (+ a b) (+ a b)))
-(print (doublesum 1 2))
+(define (quadsum a b)
+    (+ (+ (+ a b) (+ a b)) (+ (+ (+ a b) (+ a b)))))
+(print (quadsum 1 2))
